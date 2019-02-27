@@ -1,0 +1,7 @@
+uint8 error_code
+uint8 vertical_wall_status
+uint8 vehicle_height
+uint8 tailgate_state
+uint8 SOC
+int8 vehicle_roll
+int8 vehicle_pitch
