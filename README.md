@@ -1,24 +1,46 @@
-## msg structure
+## msg file structure
 three_one_msgs  
-©À©¤©¤ CMakeLists.txt  
-©À©¤©¤ msg  
-©¦0„20„2 ©À©¤©¤ control.msg  
-©¦0„20„2 ©À©¤©¤ control_speed.msg  
-©¦0„20„2 ©À©¤©¤ control_steer.msg  
-©¦0„20„2 ©À©¤©¤ control_suspension.msg  
-©¦0„20„2 ©À©¤©¤ rawdata_recv.msg  
-©¦0„20„2 ©À©¤©¤ rawdata_send.msg  
-©¦0„20„2 ©À©¤©¤ report_control_data.msg  
-©¦0„20„2 ©À©¤©¤ report_cylinder_position.msg  
-©¦0„20„2 ©À©¤©¤ report_cylinder_pressure.msg  
-©¦0„20„2 ©À©¤©¤ report_distance.msg  
-©¦0„20„2 ©À©¤©¤ report_give_back.msg  
-©¦0„20„2 ©À©¤©¤ report_motion.msg  
-©¦0„20„2 ©À©¤©¤ report.msg  
-©¦0„20„2 ©À©¤©¤ report_torque.msg  
-©¦0„20„2 ©¸©¤©¤ report_vehicle_state.msg  
-©À©¤©¤ package.xml  
-©¸©¤©¤ readme.md  
+â”œâ”€â”€ CMakeLists.txt  
+â”œâ”€â”€ msg  
+â”‚   â”œâ”€â”€ control.msg    &emsp;# total control of the car  
+â”‚Â Â  â”œâ”€â”€ control_speed.msg    &emsp;# control the speed of the car  
+â”‚Â Â  â”œâ”€â”€ control_steer.msg    &emsp;# control the steer of the car  
+â”‚Â Â  â”œâ”€â”€ control_suspension.msg    &emsp;# control the suspension of the car  
+â”‚Â Â  â”œâ”€â”€ rawdata_recv.msg    &emsp;# udp receive rawdata for the car  
+â”‚Â Â  â”œâ”€â”€ rawdata_send.msg    &emsp;# udp send rawdata to the car  
+â”‚Â Â  â”œâ”€â”€ report_control_data.msg    &emsp;# feedback of control data from `ecu_communication`, for comparation and analysis  
+â”‚Â Â  â”œâ”€â”€ report_cylinder_position.msg    &emsp;# feedback of cyclinder position  
+â”‚Â Â  â”œâ”€â”€ report_cylinder_pressure.msg    &emsp;# feedback of cyclinder pressure  
+â”‚Â Â  â”œâ”€â”€ report_distance.msg    &emsp;# feedback of mileage and pulse counter  
+â”‚Â Â  â”œâ”€â”€ report_give_back.msg    &emsp;# feedback of control data from ecu  
+â”‚Â Â  â”œâ”€â”€ report_motion.msg    &emsp;# feedback speed info of the car  
+â”‚Â Â  â”œâ”€â”€ report.msg    &emsp;# total feedback of the car  
+â”‚Â Â  â”œâ”€â”€ report_torque.msg    &emsp;# feedback of torque  
+â”‚Â Â  â””â”€â”€ report_vehicle_state.msg    &emsp;# feedback of functions, such as light, ring.  
+â”œâ”€â”€ package.xml  
+â””â”€â”€ readme.md  
+
+## structure of `control.msg`
+uint8 priority  
+three_one_msgs/control_speed speed  
+  uint8 priority  
+  uint8 halt  
+  uint8 gear  
+  float32 speed  
+three_one_msgs/control_steer steer  
+  uint8 priority  
+  float64 curvature  
+three_one_msgs/control_suspension suspension  
+  uint8 priority  
+  uint8 cylinder_select  
+  uint8 suspension_select  
+  uint8 suspension_work_mode  
+  uint8 suspension_work_mode_detail  
+  uint8 suspension_cylinder_select_mode  
+  uint8 suspension_cylinder_motor_control  
+  uint8 vertical_wall_mode  
+  uint8 fix_two_chamber_valve  
+
 
 ## msg file descriptions
 1. The file "control.msg" can control all of the function of the car.
