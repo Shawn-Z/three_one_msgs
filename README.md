@@ -1,26 +1,20 @@
-## msg structure
 three_one_msgs
-©À©¤©¤ CMakeLists.txt
-©À©¤©¤ msg
-©¦0„20„2 ©À©¤©¤ control.msg
-©¦0„20„2 ©À©¤©¤ control_speed.msg
-©¦0„20„2 ©À©¤©¤ control_steer.msg
-©¦0„20„2 ©À©¤©¤ control_suspension.msg
-©¦0„20„2 ©À©¤©¤ rawdata_recv.msg
-©¦0„20„2 ©À©¤©¤ rawdata_send.msg
-©¦0„20„2 ©À©¤©¤ report_control_data.msg
-©¦0„20„2 ©À©¤©¤ report_cylinder_position.msg
-©¦0„20„2 ©À©¤©¤ report_cylinder_pressure.msg
-©¦0„20„2 ©À©¤©¤ report_distance.msg
-©¦0„20„2 ©À©¤©¤ report_give_back.msg
-©¦0„20„2 ©À©¤©¤ report_motion.msg
-©¦0„20„2 ©À©¤©¤ report.msg
-©¦0„20„2 ©À©¤©¤ report_torque.msg
-©¦0„20„2 ©¸©¤©¤ report_vehicle_state.msg
-©À©¤©¤ package.xml
-©¸©¤©¤ readme.md
-
-## msg file descriptions
-1. The file "control.msg" can control all of the function of the car.
-2. The files with prefix of "control_"(eg. "control_speed.msg") can control part of the function of the car.
-3. The file "report.msg" contains feedbacks of the car, and it is composed of files with prefix "report_". For now, testing on 6t, feedbacks are mainly contained in "report_motion.msg".
+â”œâ”€â”€ CMakeLists.txt
+â”œâ”€â”€ msg
+â”‚ â”œâ”€â”€ control.msg â€ƒ# total control of the car
+â”‚   â”œâ”€â”€ control_speed.msg â€ƒ# control the speed of the car
+â”‚   â”œâ”€â”€ control_steer.msg â€ƒ# control the steer of the car
+â”‚   â”œâ”€â”€ control_suspension.msg â€ƒ# control the suspension of the car
+â”‚   â”œâ”€â”€ rawdata_recv.msg â€ƒ# udp receive rawdata for the car
+â”‚   â”œâ”€â”€ rawdata_send.msg â€ƒ# udp send rawdata to the car
+â”‚   â”œâ”€â”€ report_control_data.msg â€ƒ# feedback of control data from ecu_communication, for comparation and analysis
+â”‚   â”œâ”€â”€ report_cylinder_position.msg â€ƒ# feedback of cyclinder position
+â”‚   â”œâ”€â”€ report_cylinder_pressure.msg â€ƒ# feedback of cyclinder pressure
+â”‚   â”œâ”€â”€ report_distance.msg â€ƒ# feedback of mileage and pulse counter
+â”‚   â”œâ”€â”€ report_give_back.msg â€ƒ# feedback of control data from ecu
+â”‚   â”œâ”€â”€ report_motion.msg â€ƒ# feedback speed info of the car
+â”‚   â”œâ”€â”€ report.msg â€ƒ# total feedback of the car
+â”‚   â”œâ”€â”€ report_torque.msg â€ƒ# feedback of torque
+â”‚   â””â”€â”€ report_vehicle_state.msg â€ƒ# feedback of functions, such as light, ring.
+â”œâ”€â”€ package.xml
+â””â”€â”€ readme.md
