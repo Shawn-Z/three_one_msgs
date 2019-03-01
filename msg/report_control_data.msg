@@ -6,7 +6,6 @@ uint8 gear
 uint8 turn_to
 uint8 brake
 uint8 park
-
 uint8 cylinder_select
 uint8 suspension_select
 uint8 vertical_wall_mode
