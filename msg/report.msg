@@ -1,9 +1,0 @@
-report_control_data control
-report_give_back give_back
-report_cylinder_pressure cylinder_pressure
-report_cylinder_position cylinder_position
-report_vehicle_state vehicle_state
-report_distance distance
-report_torque torque
-report_motion motion
-uint64 counter

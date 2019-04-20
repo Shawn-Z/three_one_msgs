@@ -9,3 +9,4 @@ float32 mechanical_brake
 float64 vehicle_speed
 float64 left_wheel_speed  # signed
 float64 right_wheel_speed  # signed
+float32 curvature

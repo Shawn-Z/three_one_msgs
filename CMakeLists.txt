@@ -12,21 +12,21 @@ add_message_files(
     DIRECTORY
     msg
     FILES
-	control_speed.msg
-	control_steer.msg
-	control_suspension.msg
-	control.msg
-	report_motion.msg
-	report_torque.msg
-	report_distance.msg
-	report_vehicle_state.msg
-	report_cylinder_position.msg
-	report_cylinder_pressure.msg
-	report_give_back.msg
-	report_control_data.msg
-    report.msg
-	rawdata_recv.msg
-	rawdata_send.msg
+	ControlSpeed.msg
+	ControlSteer.msg
+	ControlSuspension.msg
+	Control.msg
+	ReportMotion.msg
+	ReportTorque.msg
+	ReportDistance.msg
+	ReportVehicleState.msg
+	ReportCylinderPosition.msg
+	ReportCylinderPressure.msg
+	ReportGiveBack.msg
+	ReportControlData.msg
+    Report.msg
+	RawdataRecv.msg
+	RawdataSend.msg
 )
 
 generate_messages()

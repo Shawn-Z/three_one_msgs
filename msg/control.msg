@@ -1,4 +1,0 @@
-uint8 priority
-control_speed speed
-control_steer steer
-control_suspension suspension
