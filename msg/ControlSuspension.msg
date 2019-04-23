@@ -7,3 +7,4 @@ uint8 suspension_cylinder_select_mode
 uint8 suspension_cylinder_motor_control
 uint8 vertical_wall_mode
 uint8 fix_two_chamber_valve
+uint8 entrenchment

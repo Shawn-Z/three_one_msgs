@@ -7,4 +7,5 @@ ReportDistance distance
 ReportTorque torque
 ReportMotion motion
 uint8 control_mode
+uint8 operation_mode
 uint64 counter

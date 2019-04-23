@@ -15,6 +15,7 @@ add_message_files(
 	ControlSpeed.msg
 	ControlSteer.msg
 	ControlSuspension.msg
+	ControlWeapon.msg
 	Control.msg
 	ReportMotion.msg
 	ReportTorque.msg
